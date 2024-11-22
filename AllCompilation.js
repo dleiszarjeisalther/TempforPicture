@@ -667,9 +667,12 @@
     ];
     
     questionsAndAnswers.forEach(qa => {
-        const questionElem = Array.from(document.querySelectorAll(".qtext")).find(el => el.textContent.includes(qa.question));
+        const questionElem = Array.from(document.querySelectorAll(".qtext")).find(el => el.textContent.trim() === qa.question);
         if (questionElem) {
-            const answerElem = Array.from(questionElem.parentNode.querySelectorAll("input[type=radio]")).find(input => input.nextElementSibling.textContent.includes(qa.answer));
+            const answerElem = Array.from(questionElem.parentNode.querySelectorAll("input[type=radio]")).find(input => {
+                const labelElem = input.nextElementSibling.querySelector('.flex-fill');
+                return labelElem && labelElem.textContent.trim() === qa.answer;
+            });
             if (answerElem) {
                 answerElem.click();
                 actionPerformed = true;
