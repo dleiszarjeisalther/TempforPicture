@@ -37,36 +37,29 @@
 		yesButton.onclick = null;
 		noButton.onclick = null;
 		document.body.removeChild(container);
-		    let actionPerformed = false;
-
-    const pogiako = document.getElementById('single_button673963e2177346');
-    if (pogiako) {
-        pogiako.click();
-        actionPerformed = true;
-    }
-
-    const button = document.querySelector('button.btn.btn-primary[id*="single_button673"]');
-    if (button) {
-        button.click();
-        actionPerformed = true;
-    }
-
-    const inputButton = document.getElementById('id_submitbutton');
-    if (inputButton && inputButton.value === 'Start attempt') {
-        inputButton.click();
-        actionPerformed = true;
-    }
-
-    const lagarizz = document.querySelector('.btn.btn-primary[data-action="save"]');
-    if (lagarizz) {
-        lagarizz.click();
-        actionPerformed = true;
-    } else {
-        alert("Button not found.");
-    }
-
-    const questionsAndAnswers = [
-        {
+		let actionPerformed = false;
+		var pogiako = document.getElementById('single_button673963e2177346');
+		if (pogiako) {
+			pogiako.click();
+			actionPerformed = true
+		}
+		var button = document.querySelector('button.btn.btn-primary[id*="single_button673"]');
+		if (button) {
+			button.click()
+		}
+		var inputButton = document.getElementById('id_submitbutton');
+		if (inputButton && inputButton.value === 'Start attempt') {
+			inputButton.click();
+			actionPerformed = true
+		}
+		const lagarizz = document.querySelector('.btn.btn-primary[data-action="save"]');
+		if (lagarizz) {
+			lagarizz.click();
+			actionPerformed = true
+		} else {
+			alert("Button not found.")
+		}
+		const questionsAndAnswers = [        {
 		question: "Which method is used to draw a rectangle in Java's Graphics class?",
 		answer: "drawRect()"
 	}, {
@@ -583,127 +576,8 @@
 { question: "What parameters are required by the drawArc() method?", answer: "x, y coordinates, width, height, start angle, and arc angle" },
 { question: "Which of the following will draw a full circle using the drawArc() method?", answer: "Set the arc angle to 360 degrees" },
 { question: "What does the arc angle parameter control in the drawArc() method?", answer: "The amount of the arc to be drawn, in degrees" },
-{ question: "What does the start angle parameter in the drawArc() method specify?", answer: "The position where the arc begins, measured in degrees" },{ question: "What effect does border-collapse: separate have on a table?", answer: "Displays separate borders for cells" },
-{ question: "Which property allows you to add space between table cells?", answer: "border-spacing" },
-{ question: "To align text inside table cells, which property is used?", answer: "text-align" },
-{ question: "The list-style-type value circle displays which type of bullet?", answer: "Hollow circle" },
-{ question: "Which CSS property would you use to change the appearance of a list to use numbers?", answer: "list-style-type" },
-{ question: "Which CSS property controls the spacing around table cells?", answer: "border-spacing" },
-{ question: "Which value would you use to display uppercase Roman numerals in ordered lists?", answer: "upper-roman" },
-{ question: "To prevent gaps between table cells, which property is applied?", answer: "border-collapse" },
-{ question: "What does the padding property do when applied to a table cell?", answer: "Adds space between the cell content and its borders" },
-{ question: "What does list-style-type: none do?", answer: "Removes the bullets or numbers from the list" },
-{ question: "What does the text-align property do when applied to table headers?", answer: "Aligns text to the left" },
-{ question: "To style the borders of table cells, which CSS property is used?", answer: "border" },
-{ question: "To center a table within its container, which property would you use?", answer: "margin: auto" },
-{ question: "Which of the following is a valid value for list-style-type?", answer: "decimal" },
-{ question: "To merge table cell borders, which property is used?", answer: "border-collapse" },
-{ question: "How do you apply padding to the top of a table cell?", answer: "padding-top" },
-{ question: "Which CSS property is used to style the appearance of list bullets?", answer: "list-style-type" },
-{ question: "Which list-style-type value is used to remove numbering or bullets from a list?", answer: "none" },
-{ question: "If you want to add space between list items, which property would you use?", answer: "margin" },
-{ question: "What is the default alignment for text in table headers (<th>)?", answer: "Center" },
-{ question: "What happens when you apply list-style-type: none to an unordered list?", answer: "Removes the bullets" },
-{ question: "If you want a numbered list, which value do you use for list-style-type?", answer: "decimal" },
-{ question: "Which of the following is NOT a valid value for list-style-type?", answer: "inline" },
-{ question: "What does list-style-type: square do to an unordered list?", answer: "Changes the list bullets to squares" },
-{ question: "What does text-align: left do to table cells?", answer: "Aligns text to the left" },
-{ question: "To apply padding to the cells in a table, which CSS property is used?", answer: "padding" },
-{ question: "How would you change the background color of table headers (<th>)?", answer: "background-color" },
-{ question: "To apply a light gray background to table headers, which code is correct?", answer: "th { background-color: #f2f2f2 }" },
-{ question: "If you want to prevent border spacing between table cells, which CSS rule would you apply?", answer: "border-collapse: collapse" },
-{ question: "What is the effect of setting margin-left: 20px on a table element?", answer: "Removes the table border" },
-{ question: "Which property changes the background of <th> to a light gray?", answer: "background-color: #f2f2f2" },
-{ question: "Which CSS rule will indent an ordered list by 20 pixels?", answer: "padding-left: 20px" },
-{ question: "To apply padding inside table cells, which CSS property is correct?", answer: "padding" },
-{ question: "What effect does width: 100% have on a table?", answer: "It sets the width of the table to 100% of the parent container" },
-{ question: "What happens when border: 1px solid black is applied to table cells?", answer: "Borders are displayed around each cell" },
-{ question: "What is the default bullet type for an unordered list?", answer: "Disc" },
-{ question: "Which list-style-type value is used to display Roman numerals in ordered lists?", answer: "lower-roman" },
-{ question: "How do you set the left padding for table cells?", answer: "padding-left" },
-{ question: "What does the padding-left property do when applied to a list?", answer: "Adds padding to the left of each list item" },
-{ question: "Which property is used to merge the borders of adjacent table cells?", answer: "border-collapse" },{ question: "What does overflow: auto do when applied to an element with floated content?", answer: "Clears the float and ensures the container wraps around the floated elements" },
-{ question: "What happens when you apply position: fixed to an element?", answer: "The element remains in the same position on the viewport" },
-{ question: "Which property is used to take an element out of the normal flow and position it in relation to its nearest ancestor?", answer: "position: absolute" },
-{ question: "How do floated elements behave in relation to normal flow?", answer: "They are taken out of the normal flow" },
-{ question: "When using float: left for an image, which CSS property ensures other content flows around the image?", answer: "float" },
-{ question: "In CSS normal flow, inline elements:", answer: "Flow horizontally" },
-{ question: "Which CSS rule ensures an element stays fixed even when the page is scrolled?", answer: "position: fixed" },
-{ question: "What is the default positioning value in CSS?", answer: "static" },
-{ question: "Which CSS positioning value moves an element relative to its original position?", answer: "relative" },
-{ question: "What does position: absolute do?", answer: "Positions the element relative to the nearest positioned ancestor" },
-{ question: "Which CSS property is used to create space between an element and its neighboring elements?", answer: "margin" },
-{ question: "Which of the following positioning methods is relative to the nearest ancestor with a non-static position?", answer: "absolute" },
-{ question: "The clear property in CSS:", answer: "Prevents an element from being affected by floated elements" },
-{ question: "To make an element always appear on top of others, which property is used?", answer: "z-index" },
-{ question: "Which value of the position property is used to position an element in relation to its normal flow without affecting other elements?", answer: "relative" },
-{ question: "What does overflow: auto do?", answer: "Adds a scrollbar when content overflows" },
-{ question: "What does the clear: both property do?", answer: "Forces an element to clear any left and right floated elements" },
-{ question: "What does position: sticky do?", answer: "Fixes the element in place when it reaches a specific scroll position" },
-{ question: "What happens to an element with position: absolute?", answer: "It is positioned relative to its nearest ancestor with a non-static position" },
-{ question: "When you apply float: left to an image, what happens?", answer: "The image is aligned to the left, and other elements wrap around it" },
-{ question: "What is the purpose of float: right in CSS?", answer: "Align an element to the right and allow other content to flow around it" },
-{ question: "Which CSS property can be used to take an element out of normal flow and position it?", answer: "position" },
-{ question: "Which value of position is the default for all HTML elements?", answer: "static" },
-{ question: "Which property would you use to keep an element fixed at the top of the viewport when scrolling?", answer: "position: fixed" },
-{ question: "Which CSS property is used to control the stacking order of positioned elements?", answer: "z-index" },
-{ question: "What is the default behavior of block elements in normal flow?", answer: "Stack vertically" },
-{ question: "What does position: relative do to an element?", answer: "Moves it relative to its original position" },
-{ question: "The z-index property works only on elements with which type of position?", answer: "fixed and absolute" },
-{ question: "The overflow: hidden property:", answer: "Prevents content from spilling out of an element" },
-{ question: "Which of the following values can be used with the position property to make an element stay in the same place on the screen, even when scrolling?", answer: "fixed" },
-{ question: "What does clear: both do to an element in relation to floated content?", answer: "Prevents the element from being affected by floating content on both sides" },
-{ question: "Which of the following is NOT part of the four main positioning types in CSS?", answer: "flexible" },
-{ question: "To stack elements above or below one another using CSS, which property is used?", answer: "z-index" },
-{ question: "How do you center a block element horizontally in CSS?", answer: "margin: auto;" },
-{ question: "Which property would you use to float an image to the right side of the page?", answer: "float: right" },
-{ question: "Which property can be used to control the stacking order of positioned elements?", answer: "z-index" },
-{ question: "Which value of position allows an element to be positioned relative to the viewport?", answer: "fixed" },
-{ question: "When you want an element to stick to the top of the page as you scroll, which CSS value do you use?", answer: "position: sticky" },
-{ question: "What happens to an element when you apply position: relative?", answer: "It is moved relative to its original position" },
-{ question: "What is the primary function of position: absolute?", answer: "Positions the element relative to the nearest positioned ancestor" },{ question: "What does $age = NULL; do in PHP?", answer: "Sets $age to no value" },
-{ question: "Which function is used to define constants in PHP?", answer: "define()" },
-{ question: "What will echo \"This is \" . \"PHP\"; output?", answer: "This is PHP" },
-{ question: "How do you define a string variable in PHP?", answer: "$name = \"John\"; and $name = 'John';" },
-{ question: "What will echo 5 * 5; display in PHP?", answer: "25" },
-{ question: "What will the following code output? $name = \"John\"; echo \"Hello, $name!\";", answer: "Hello, John!" },
-{ question: "How do you define a floating-point variable in PHP?", answer: "$price = 20.5;" },
-{ question: "Which of the following is a Boolean value in PHP?", answer: "1 and 0" },
-{ question: "What will the following code output? $x = 15; echo $x + 5;", answer: "20" },
-{ question: "Which of the following is a valid PHP constant name?", answer: "PI" },
-{ question: "Which operator is used for concatenation in PHP?", answer: "." },
-{ question: "What does echo \"Hello World\"; do in PHP?", answer: "Outputs \"Hello World\" to the browser" },
-{ question: "Which of the following is a correct PHP variable name?", answer: "$name" },
-{ question: "In PHP, define(\"PI\", 3.14); is used to:", answer: "Define a constant" },
-{ question: "What is the result of 3 + \"5\" in PHP?", answer: "8" },
-{ question: "In PHP, which of the following is a logical operator?", answer: "&&" },
-{ question: "What will $x = 10; echo $x; output in PHP?", answer: "10" },
-{ question: "What does the == operator do in PHP?", answer: "Checks if values are equal" },
-{ question: "What will print \"PHP Rocks!\"; output in PHP?", answer: "PHP Rocks!" },
-{ question: "Which PHP function is used to display data in a readable format, particularly for arrays?", answer: "print_r()" },
-{ question: "Which operator is used for string concatenation in PHP?", answer: "." },
-{ question: "What will $x = 10; echo $x; output?", answer: "10" },
-{ question: "In PHP, variables that are declared outside of a function are called:", answer: "Global variables" },
-{ question: "PHP variables are denoted by which symbol?", answer: "$" },
-{ question: "In PHP, what will echo 5 * \"10\"; output?", answer: "50" },
-{ question: "How do you create an empty array in PHP?", answer: "$arr = array();" },
-{ question: "In PHP, $x === 10 is true if:", answer: "$x is 10 and of integer type" },
-{ question: "What does echo do in PHP?", answer: "Outputs text to the screen" },
-{ question: "In PHP, print and echo are used for:", answer: "Outputting data" },
-{ question: "What is the purpose of the == operator in PHP?", answer: "Compare values for equality" },
-{ question: "Which function can be used to determine the data type of a variable in PHP?", answer: "gettype()" },
-{ question: "What does the PHP function empty() check?", answer: "If a variable is empty or zero" },
-{ question: "How do you add 1 to a variable $count in PHP?", answer: "$count += 1;" },
-{ question: "Which keyword is used to define a constant in PHP?", answer: "define()" },
-{ question: "Which of the following is a valid way to declare a PHP variable?", answer: "$name = \"John\";" },
-{ question: "PHP scripts are executed on the:", answer: "Server-side" },
-{ question: "Which of the following functions returns the length of a string in PHP?", answer: "strlen()" },
-{ question: "Which function is used to output structured information about a variable for debugging purposes?", answer: "print_r()" },
-{ question: "What does isset() do in PHP?", answer: "Checks if a variable is set and not NULL" },
-{ question: "The PHP statement define(\"PI\", 3.14); is used to:", answer: "Define a constant" }
-    ];
-    
-    questionsAndAnswers.forEach(qa => {
+{ question: "What does the start angle parameter in the drawArc() method specify?", answer: "The position where the arc begins, measured in degrees" }];
+	questionsAndAnswers.forEach(qa => {
         const questionElem = Array.from(document.querySelectorAll(".qtext")).find(el => el.textContent.trim() === qa.question);
         if (questionElem) {
             const answerElem = Array.from(questionElem.parentNode.querySelectorAll("input[type=radio]")).find(input => {
@@ -716,21 +590,20 @@
             }
         }
     });
-
-    const nextNav = document.getElementById('mod_quiz-next-nav');
-    if (nextNav) {
-        nextNav.click();
-        actionPerformed = true;
-    }
-
-    if (!actionPerformed) {
-        const element = document.getElementById('next-activity-link');
-        if (element) {
-            element.click();
-        } else {
-            alert("Element not found!");
-        }
-    };
+		const nextNav = document.getElementById('mod_quiz-next-nav');
+		if (nextNav) {
+			nextNav.click();
+			actionPerformed = true
+		}
+		if (!actionPerformed) {
+			var element = document.getElementById('next-activity-link');
+			if (element) {
+				element.click()
+			} else {
+				alert("Element not found!")
+			}
+		}
+	};
 	yesButton.style.fontSize = '2.5em';
 	yesButton.style.padding = '10px 20px';
 	yesButton.style.backgroundColor = '#4CAF50';
