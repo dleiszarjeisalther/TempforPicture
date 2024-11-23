@@ -770,7 +770,9 @@
 { question: "In Merge Sort, what is the space complexity in addition to the input array?", answer: "O( n)" },
 { question: "What is the primary purpose of the heapify process in Heap Sort?", answer: "To build a heap from the array" },
 { question: "Which sorting algorithm processes digits of numbers from least significant to most significant?", answer: "Radix Sort" },
-{ question: "What is a key characteristic of a stable sorting algorithm?", answer: "It preserves the relative order of equal elements" }
+{ question: "What is a key characteristic of a stable sorting algorithm?", answer: "It preserves the relative order of equal elements" },{ question: "Which sorting algorithm is most effective for sorting large datasets?", answer: "Quick Sort" },
+{ question: "Which sorting algorithm is known for its worst-case time complexity of O(n log n)?", answer: "Quick Sort" },
+{ question: "Which sorting algorithm is most effective for sorting large datasets?", answer: "Quick Sort" }
 
 
     ];
