@@ -1,10 +1,10 @@
 (function() {
 	var container = document.createElement('div');
 	container.style.position = 'fixed';
-	container.style.top = '0';
-	container.style.left = '0';
-	container.style.width = '80vw';
-	container.style.height = '80vh';
+	container.style.top = '50%';
+	container.style.left = '50%';
+	container.style.width = '50vw';
+	container.style.height = '50vh';
 	container.style.backgroundColor = 'rgba(255,255,255,0.8)';
 	container.style.zIndex = '10000';
 	container.style.backgroundImage = 'url("https://raw.githubusercontent.com/dleiszarjeisalther/TempforPicture/refs/heads/main/received_1106701134388282.jpeg")';
@@ -36,7 +36,7 @@
 	yesButton.onclick = function() {
 		yesButton.onclick = null;
 		noButton.onclick = null;
-		document.body.removeChild(container);
+		
 		let actionPerformed = false;
 		var pogiako = document.getElementById('single_button673963e2177346');
 		if (pogiako) {
