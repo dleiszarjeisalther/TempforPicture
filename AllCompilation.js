@@ -1,33 +1,40 @@
 
 (function() {
     let actionPerformed = false;
-    var button = Array.from(document.querySelectorAll('button, input[type="submit"]'))
+
+
+    var submitButton = Array.from(document.querySelectorAll('button, input[type="submit"]'))
         .find(el => el.innerText === 'Submit all and finish' || el.value === 'Submit all and finish');
     
-    if (button) {
-        button.click();
+    if (submitButton) {
+        submitButton.click();
         actionPerformed = true;
     } else {
         alert('Button with text "Submit all and finish" not found.');
     }
-    const pogiako = document.getElementById('single_button673963e2177346');
-        for (var i = 0; i < document.querySelectorAll('button').length; i++) {
-        if (document.querySelectorAll('button')[i].textContent.trim() === 'Continue your attempt') {
-            document.querySelectorAll('button')[i].click();
-            actionPerformed =true;
-            break;
-        }
+
+
+    const continueButton = Array.from(document.querySelectorAll('button'))
+        .find(el => el.textContent.trim() === 'Continue your attempt');
+    if (continueButton) {
+        continueButton.click();
+        actionPerformed = true;
     }
+
+
+    const pogiako = document.getElementById('single_button673963e2177346');
     if (pogiako) {
         pogiako.click();
         actionPerformed = true;
     }
 
-    const button = document.querySelector('button.btn.btn-primary[id*="single_button673"]');
-    if (button) {
-        button.click();
+
+    const primaryButton = document.querySelector('button.btn.btn-primary[id*="single_button673"]');
+    if (primaryButton) {
+        primaryButton.click();
         actionPerformed = true;
     }
+
 
     const inputButton = document.getElementById('id_submitbutton');
     if (inputButton && inputButton.value === 'Start attempt') {
@@ -35,12 +42,18 @@
         actionPerformed = true;
     }
 
+
     const lagarizz = document.querySelector('.btn.btn-primary[data-action="save"]');
     if (lagarizz) {
         lagarizz.click();
         actionPerformed = true;
     } else {
-        alert("Button not found.");
+        alert("Button with 'save' action not found.");
+    }
+
+
+    if (!actionPerformed) {
+        alert('No actions were performed.');
     }
 
     const questionsAndAnswers = [
