@@ -929,12 +929,5 @@
         actionPerformed = true;
     }
 
-    if (!actionPerformed) {
-        const element = document.getElementById('next-activity-link');
-                if (element) {
-          delayedClick(element, 99000);
-        } else {
-            alert("Element not found!");
-        }
-    }
+    
 })();
